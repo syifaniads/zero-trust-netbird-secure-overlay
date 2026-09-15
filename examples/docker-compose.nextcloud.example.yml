@@ -1,0 +1,33 @@
+# Sanitized illustrative example; not the historical deployment file.
+services:
+  db:
+    image: mariadb:11
+    restart: unless-stopped
+    environment:
+      MARIADB_DATABASE: nextcloud
+      MARIADB_USER: nextcloud
+      MARIADB_PASSWORD: ${NEXTCLOUD_DB_PASSWORD}
+      MARIADB_ROOT_PASSWORD: ${MARIADB_ROOT_PASSWORD}
+    volumes:
+      - db_data:/var/lib/mysql
+
+  nextcloud:
+    image: nextcloud:stable
+    restart: unless-stopped
+    depends_on:
+      - db
+    environment:
+      MYSQL_DATABASE: nextcloud
+      MYSQL_USER: nextcloud
+      MYSQL_PASSWORD: ${NEXTCLOUD_DB_PASSWORD}
+      MYSQL_HOST: db
+    volumes:
+      - nextcloud_data:/var/www/html
+    # Bind only as required by your deployment design.
+    # Prefer access through the intended protected network path.
+    ports:
+      - "8080:80"
+
+volumes:
+  db_data:
+  nextcloud_data:
