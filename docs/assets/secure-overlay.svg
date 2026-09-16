@@ -1,0 +1,46 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1450" height="820" viewBox="0 0 1450 820" role="img" aria-labelledby="title desc">
+  <title id="title">Zero Trust NetBird secure overlay architecture</title>
+  <desc id="desc">Evidence-derived view of cloud Linux peers, NetBird WireGuard overlay, access policy, and Dockerized Nextcloud application authorization.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#07111f"/><stop offset="1" stop-color="#111827"/></linearGradient>
+    <filter id="s"><feDropShadow dx="0" dy="7" stdDeviation="9" flood-opacity="0.24"/></filter>
+    <marker id="a" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto"><path d="M0,0 L0,6 L9,3 z" fill="#94a3b8"/></marker>
+    <style>.tt{font:700 34px Inter,Segoe UI,sans-serif;fill:#f8fafc}.sub{font:400 16px Inter,Segoe UI,sans-serif;fill:#94a3b8}.h{font:700 18px Inter,Segoe UI,sans-serif;fill:#f8fafc}.t{font:500 14px Inter,Segoe UI,sans-serif;fill:#cbd5e1}.sm{font:500 12px Inter,Segoe UI,sans-serif;fill:#94a3b8}.box{rx:18;filter:url(#s)}.line{stroke:#94a3b8;stroke-width:2.2;fill:none;marker-end:url(#a)}</style>
+  </defs>
+  <rect width="1450" height="820" fill="url(#bg)"/>
+  <text x="65" y="62" class="tt">Zero Trust NetBird Secure Overlay</text>
+  <text x="65" y="92" class="sub">Sanitized architecture reconstructed from surviving NetBird/WireGuard, cloud-node, policy, connectivity and Nextcloud evidence</text>
+
+  <rect x="70" y="150" width="260" height="125" fill="#172554" stroke="#3b82f6" class="box"/>
+  <text x="125" y="190" class="h">SME / Client Peer A</text><text x="123" y="220" class="t">Linux cloud node</text><text x="120" y="248" class="sm">Authenticated overlay peer</text>
+  <rect x="70" y="330" width="260" height="125" fill="#172554" stroke="#3b82f6" class="box"/>
+  <text x="125" y="370" class="h">SME / Client Peer B</text><text x="123" y="400" class="t">Linux cloud node</text><text x="120" y="428" class="sm">Authenticated overlay peer</text>
+  <rect x="70" y="510" width="260" height="125" fill="#172554" stroke="#3b82f6" class="box"/>
+  <text x="125" y="550" class="h">Admin / Peer C</text><text x="123" y="580" class="t">Linux cloud node</text><text x="120" y="608" class="sm">Privileged path by policy</text>
+
+  <rect x="475" y="250" width="340" height="280" fill="#17202a" stroke="#14b8a6" class="box"/>
+  <text x="548" y="292" class="h">NetBird / WireGuard Overlay</text>
+  <text x="525" y="332" class="t">Peer identity + authenticated enrollment</text>
+  <text x="525" y="364" class="t">Encrypted peer-to-peer transport</text>
+  <text x="525" y="396" class="t">Groups + reachability policy</text>
+  <text x="525" y="428" class="t">Reduced implicit lateral access</text>
+  <rect x="535" y="458" width="220" height="42" rx="12" fill="#123b36" stroke="#2dd4bf"/>
+  <text x="572" y="485" class="sm">NETWORK AUTHORIZATION</text>
+
+  <path d="M330 212 L475 315" class="line"/><path d="M330 392 L475 392" class="line"/><path d="M330 572 L475 465" class="line"/>
+
+  <rect x="965" y="220" width="360" height="340" fill="#241a32" stroke="#8b5cf6" class="box"/>
+  <text x="1054" y="265" class="h">Protected Collaboration Service</text>
+  <rect x="1015" y="300" width="260" height="88" rx="14" fill="#172554" stroke="#3b82f6"/>
+  <text x="1073" y="334" class="h">Docker Host</text><text x="1053" y="362" class="sm">Service reachable only on intended path</text>
+  <rect x="1015" y="420" width="260" height="95" rx="14" fill="#14251f" stroke="#22c55e"/>
+  <text x="1085" y="455" class="h">Nextcloud</text><text x="1048" y="482" class="t">Users · groups · sharing rules</text>
+  <text x="1049" y="505" class="sm">APPLICATION AUTHORIZATION</text>
+  <path d="M815 390 L965 390" class="line"/>
+
+  <rect x="450" y="650" width="900" height="95" rx="18" fill="#111827" stroke="#334155"/>
+  <text x="485" y="685" class="h">Validation boundary</text>
+  <text x="485" y="714" class="t">Peer reachability + policy behavior + protected Nextcloud access were retained as evidence. Full enterprise ZTNA, device posture, SDN/VNF and production HA are not claimed.</text>
+
+  <text x="65" y="785" class="sm">This is an evidence-derived portfolio reconstruction, not an export of the original NetBird account or a production network screenshot.</text>
+</svg>
